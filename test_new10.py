@@ -1,0 +1,16 @@
+import time
+
+class Loggable:
+    def log(self, msg):
+        print(str(time.ctime()) + ": " + str(msg))
+
+class LoggableList(list, Loggable):
+    def append(self, ms):
+        self.log(ms)
+        super(LoggableList, self).append(ms) #fixme
+
+
+a = LoggableList()
+a.append('msg 1')
+a.append('msg 2')
+print(a)
