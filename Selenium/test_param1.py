@@ -22,7 +22,7 @@ links = [
     "https://stepik.org/lesson/236904/step/1",
     "https://stepik.org/lesson/236905/step/1"
 ]
-@pytest.mark.parametrize('link', ["https://stepik.org/lesson/236905/step/1"])
+@pytest.mark.parametrize('link', links)
 def test_go_link(browser, link):
     browser.get(link)
     time.sleep(5)
