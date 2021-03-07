@@ -8,3 +8,7 @@ def browser():
     yield browser
     print("\nquit browser..")
     browser.quit()
+
+def pytest_addoption(parser):
+    parser.addoption('--browser_name', action='store', default='Chrome',
+                     help="Choose browser: Chrome or Firefox")
